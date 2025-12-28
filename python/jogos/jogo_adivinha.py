@@ -1,4 +1,3 @@
-
 def jogar():
     print("***************************************")
     print("*         Jogo de Adivinhação         *")
