@@ -1,5 +1,10 @@
 import random
 
+def mensagem_de_abertura():
+    print("***************************************")
+    print("***   Bem vindo ao joga da Forca    ***")
+    print("***************************************")
+
 #pegar palavra secreta
 def gerar_palavra_secreta():
     arquivo = open('palavras.txt', 'r')
@@ -7,36 +12,51 @@ def gerar_palavra_secreta():
     for palavra in arquivo:
         palavras.append(palavra.strip())
     
-    palavra_da_vez = random.randrange(0, 5)
+    palavra_da_vez = random.randrange(0, len(palavras))
     
     return palavras[palavra_da_vez]
 
+def inicializar_letras_acertadas(secret_word):
+    return ['_' for letra in secret_word]
+
+def pede_chute():
+    chute = input("Qual letra?: ")
+    return chute.strip().lower()
+
+def marca_acerto(letras_acertadas, secret_word, chute):
+    posicao = 0
+
+    for letra in secret_word:
+        if( letra.strip().lower() == chute):
+            letras_acertadas[posicao] = chute
+            
+        posicao += 1
+    
+    return letras_acertadas
+
+def mensagem_vencedor():
+    print("Você ganhou!")
+
+def mensagem_perdedor():
+    print("Você perdeu!")
+
+
 def jogar():
-    print("***************************************")
-    print("***   Bem vindo ao joga da Forva    ***")
-    print("***************************************")
+    mensagem_de_abertura()
     
     secret_word = gerar_palavra_secreta()
-    letras_acertadas = []
+    letras_acertadas = inicializar_letras_acertadas(secret_word)
     erros = 0
     acertou = False
     enforcou = False
     
-    #montando espaços
-    while(len(secret_word) > len(letras_acertadas)):
-        letras_acertadas.append("_")
         
     print(letras_acertadas)
     while(not acertou and not enforcou):
-        chute = input("Qual letra?: ")
-        posicao = 0
+        chute = pede_chute()
         
         if(chute.lower() in secret_word.lower()):
-            for letra in secret_word:
-                if(letra.lower() == chute.lower()):
-                    letras_acertadas[posicao] = chute
-            
-                posicao += 1
+            letras_acertadas = marca_acerto(chute = chute, secret_word = secret_word, letras_acertadas = letras_acertadas)
         else:
             erros += 1
         
@@ -45,6 +65,6 @@ def jogar():
         print(letras_acertadas)
 
     if(acertou):
-        print("Você ganhou")
+        mensagem_vencedor()
     else:
-        print("Você perdeu!")
+        mensagem_perdedor()
