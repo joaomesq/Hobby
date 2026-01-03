@@ -1,10 +1,22 @@
+import random
+
+#pegar palavra secreta
+def gerar_palavra_secreta():
+    arquivo = open('palavras.txt', 'r')
+    palavras = []
+    for palavra in arquivo:
+        palavras.append(palavra.strip())
+    
+    palavra_da_vez = random.randrange(0, 5)
+    
+    return palavras[palavra_da_vez]
 
 def jogar():
     print("***************************************")
     print("***   Bem vindo ao joga da Forva    ***")
     print("***************************************")
     
-    secret_word = 'banana'
+    secret_word = gerar_palavra_secreta()
     letras_acertadas = []
     erros = 0
     acertou = False
