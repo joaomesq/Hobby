@@ -19,11 +19,16 @@ class Conta:
         self.historico = Historico()
 
     def depositar(self, valor):
+        if(valor <= 0):
+            print("O valor precisa ser superior a zero")
+            return False
+
         self.saldo += valor
         self.historico.transacoes.append("Deposito de {}".format(valor))
     
     def sacar(self, valor):
         if(self.saldo < valor):
+            print("Saldo insuficiente")
             return False
 
         self.saldo -= valor
