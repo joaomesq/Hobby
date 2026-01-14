@@ -1,4 +1,5 @@
 import datetime
+from atualizador_de_conta import AtualizadorDeConta
 
 class Conta:
 
@@ -95,7 +96,9 @@ if __name__ == '__main__':
     conta = Conta(123, "Mesquita", 1000)
     cc = ContaCorrente(numero = 2, titular = "Euclides", saldo = 1000)
     cp = ContaPoupanca(numero = 3, titular = "Baptista", saldo = 1000)
+    
+    ac = AtualizadorDeConta(0.1)
 
-    print(conta)
-    print(cc)
-    print(cp)
+    ac.roda(cc)
+    ac.roda(conta)
+    ac.roda(cp)
