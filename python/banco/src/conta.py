@@ -10,6 +10,9 @@ class Conta:
         self._data_abertura = datetime.datetime.today()
         self._transacoes = []
     
+    def __str__(self):
+        return "Dados da Conta:\nNúmero {}\nTitular {}\nSaldo {}\nLimite {}".format(self._numero, self._titular, self._saldo, self._limite)
+
     @property
     def numero(self):
         return self._numero
@@ -67,10 +70,32 @@ class Conta:
             print("- {}".format(t))
         
         print("Saldo: {}".format(self._saldo))
+    
+    def atualiza(self, taxa):
+        self._saldo =+ self._saldo * taxa
+        return self._saldo
+
+#ContaCorrente
+class ContaCorrente(Conta):
+    def atualiza(self, taxa):
+        self._saldo += self._saldo * 2 * taxa
+        return self._saldo
+
+    def deposita(self, valor):
+        super().deposita(valor - 0.10)
+
+#ContaPoupança
+class ContaPoupanca(Conta):
+    def atualiza(self, taxa):
+        self._saldo += self._saldo * 3 * taxa
+        return self._saldo
+
 
 if __name__ == '__main__':
     conta = Conta(123, "Mesquita", 1000)
-    c1 = Conta(12, "Euclides", 200)
-    conta.deposita(300)
-    conta.transfere_para(c1, 900)
-    conta.extrato()
+    cc = ContaCorrente(numero = 2, titular = "Euclides", saldo = 1000)
+    cp = ContaPoupanca(numero = 3, titular = "Baptista", saldo = 1000)
+
+    print(conta)
+    print(cc)
+    print(cp)
