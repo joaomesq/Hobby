@@ -1,7 +1,9 @@
 import datetime
+import abc
 from atualizador_de_conta import AtualizadorDeConta
 
-class Conta:
+class Conta(abc.ABC):
+    _tipo = None
 
     def __init__(self, numero, titular, saldo, limite = 160000.0):
         self._saldo = saldo
@@ -12,7 +14,7 @@ class Conta:
         self._transacoes = []
     
     def __str__(self):
-        return "Dados da Conta:\nNúmero {}\nTitular {}\nSaldo {}\nLimite {}".format(self._numero, self._titular, self._saldo, self._limite)
+        return "Dados da Conta:\nNúmero {}\nTipo {}\nTitular {}\nSaldo {}\nLimite {}".format(self._numero, type(self)._tipo, self._titular, self._saldo, self._limite)
 
     @property
     def numero(self):
@@ -72,14 +74,19 @@ class Conta:
         
         print("Saldo: {}".format(self._saldo))
     
+    @abc.abstractmethod
     def atualiza(self, taxa):
-        self._saldo =+ self._saldo * taxa
-        return self._saldo
+        pass
 
 #ContaCorrente
 class ContaCorrente(Conta):
+
+    def __init__(self, saldo, numero, titular):
+        super().__init__(numero = numero, titular = titular, saldo = saldo)
+        type(self)._tipo = "Conta corrente"
+
     def atualiza(self, taxa):
-        self._saldo += self._saldo * 2 * taxa
+        self._saldo += self._saldo * taxa * 2
         return self._saldo
 
     def deposita(self, valor):
@@ -87,18 +94,29 @@ class ContaCorrente(Conta):
 
 #ContaPoupança
 class ContaPoupanca(Conta):
+    def __init__(self, saldo, numero, titular):
+        super().__init__(numero = numero, titular = titular, saldo = saldo)
+        type(self)._tipo = "Conta Poupança"
+        
     def atualiza(self, taxa):
-        self._saldo += self._saldo * 3 * taxa
+        self._saldo += self._saldo * taxa * 3
         return self._saldo
 
+class ContaInvestimento(Conta):
+    def __init__(self, saldo, numero, titular):
+        super().__init__(numero = numero, titular = titular, saldo = saldo)
+        type(self)._tipo = "Conta investimento"
+        
+    def atualiza(self, taxa):
+        pass
 
 if __name__ == '__main__':
-    conta = Conta(123, "Mesquita", 1000)
     cc = ContaCorrente(numero = 2, titular = "Euclides", saldo = 1000)
     cp = ContaPoupanca(numero = 3, titular = "Baptista", saldo = 1000)
-    
+    ci = ContaInvestimento(numero = 4, titular = "Mesquita", saldo = 1000)
+
     ac = AtualizadorDeConta(0.1)
 
-    ac.roda(cc)
-    ac.roda(conta)
-    ac.roda(cp)
+    print(cc)
+    print(cp)
+    print(ci)
