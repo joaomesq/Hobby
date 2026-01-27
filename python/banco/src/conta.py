@@ -1,6 +1,7 @@
 import datetime
 import abc
 from atualizador_de_conta import AtualizadorDeConta
+from tributavel_mix_in import TributavelMixIn
 
 class Conta(abc.ABC):
     _tipo = None
@@ -79,11 +80,14 @@ class Conta(abc.ABC):
         pass
 
 #ContaCorrente
-class ContaCorrente(Conta):
+class ContaCorrente(Conta, TributavelMixIn):
 
     def __init__(self, saldo, numero, titular):
         super().__init__(numero = numero, titular = titular, saldo = saldo)
         type(self)._tipo = "Conta corrente"
+
+    def get_valor_imposto(self):
+        return self._saldo * 0.1
 
     def atualiza(self, taxa):
         self._saldo += self._saldo * taxa * 2
@@ -115,8 +119,4 @@ if __name__ == '__main__':
     cp = ContaPoupanca(numero = 3, titular = "Baptista", saldo = 1000)
     ci = ContaInvestimento(numero = 4, titular = "Mesquita", saldo = 1000)
 
-    ac = AtualizadorDeConta(0.1)
-
-    print(cc)
-    print(cp)
-    print(ci)
+    print(cc.get_valor_imposto())
