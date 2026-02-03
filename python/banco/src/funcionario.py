@@ -43,6 +43,11 @@ class Gerente(Funcionario):
     def get_bonifacao(self):
         return self._salario * 0.15
     
+    def autentica(self, senha):
+        if(self._senha == senha):
+            return True
+        
+        return False
     
     def __str__(self):
         return '<Classe {}; Endereço {}>'.format(self.__class__.__name__, id(self))
@@ -52,7 +57,13 @@ class Diretor(Funcionario):
         return self._salario * 0.15
         
 if __name__ == '__main__':
+    from autenticavel import Autenticavel
+    #registrando gerente e diretor como atutenticavel
+    Autenticavel.register(Gerente)
+    #Autenticavel.register(Diretor)
+
     g = Gerente(senha = 12345667, qtd_gerenciaveis = 3, nome = "Tista", nif = 1, salario = 3000)
     d = Diretor(nome = "Tista", nif = 12, salario = 2000)
     print(g.get_bonifacao())
     
+    print(g.autentica(senha = 123))
