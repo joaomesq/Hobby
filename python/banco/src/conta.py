@@ -45,6 +45,9 @@ class Conta(abc.ABC):
         if(valor > self._saldo):
             print("Saldo insuficiente")
             return False
+        elif(valor > self._limite):
+            print("O valor pretendido ultrapassa o limite de saque")
+            return False
         elif(valor <= 0):
             print("Não pode levantar valores iguais ou menores que zero")
             return False

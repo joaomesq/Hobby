@@ -66,4 +66,4 @@ if __name__ == '__main__':
     d = Diretor(nome = "Tista", nif = 12, salario = 2000)
     print(g.get_bonifacao())
     
-    print(g.autentica(senha = 123))
+    print(g.autentica(senha = 12345667))
