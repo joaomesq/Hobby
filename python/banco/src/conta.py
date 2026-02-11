@@ -123,3 +123,4 @@ if __name__ == '__main__':
     ci = ContaInvestimento(numero = 4, titular = "Mesquita", saldo = 1000)
 
     print(cc.get_valor_imposto())
+    cc.saca(1200)
