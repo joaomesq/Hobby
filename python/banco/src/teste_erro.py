@@ -20,9 +20,39 @@ def metodo2():
 
 
 if __name__ == "__main__":
+    '''
     print("Inicio main")
     try:
-        metodo1()
-    except:
-        print("Erro")
+        n = 2
+        n = n / 1
+        print("Nenhum erro")
+        #metodo1()
+    except (ZeroDivisionError, AttributeError):
+        print("Erro!")
+    else:
+        print("Talvez apreendas de verdade")
+    
     print("Fim main")
+    try:
+        #n = 2 / 0
+        raise NameError('oi')
+    except:
+        print("Lançou um excepção")
+        #raise
+    '''
+    def divisao(x, y):
+        '''try:
+            resultado = x / y
+        except ZeroDivisionError:
+            print("Divisão por Zero")
+        else:
+            print("Resultado {}".format(resultado))
+        finally:
+            print("Executando o finally!")
+        '''
+        if(x > y):
+            raise ValueError("x maior que y")
+        
+        print("Não para a execução")
+
+    divisao(5, 1) 

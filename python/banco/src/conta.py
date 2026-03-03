@@ -49,19 +49,17 @@ class Conta(abc.ABC):
             print("O valor pretendido ultrapassa o limite de saque")
             return False
         elif(valor <= 0):
-            print("Não pode levantar valores iguais ou menores que zero")
-            return False
+            raise ValueError("Tentou sacar valor negativo")
         
         self._saldo -= valor
         self._transacoes.append("Lenvatou {}".format(valor))
     
     def deposita(self, valor):
         if(valor <= 0):
-            print("Valor não permitido")
-            return False
-        
-        self._saldo += valor
-        self._transacoes.append("Depositou {}".format(valor))
+            raise ValueError("Você tentou depositar valor negativo ou igual a 0")
+        else:
+            self._saldo += valor
+            self._transacoes.append("Depositou {}".format(valor))
     
     def transfere_para(self, destino, valor):
         if(valor <= self._saldo and valor > 0):
