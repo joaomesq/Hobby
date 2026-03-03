@@ -43,8 +43,7 @@ class Conta(abc.ABC):
 
     def saca(self, valor):
         if(valor > self._saldo):
-            print("Saldo insuficiente")
-            return False
+            raise SaldoInsuficienteError("Saldo Insuficente")
         elif(valor > self._limite):
             print("O valor pretendido ultrapassa o limite de saque")
             return False
@@ -116,9 +115,17 @@ class ContaInvestimento(Conta):
         pass
 
 if __name__ == '__main__':
+    from excecoes import SaldoInsuficienteError
+
     cc = ContaCorrente(numero = 2, titular = "Euclides", saldo = 1000)
     cp = ContaPoupanca(numero = 3, titular = "Baptista", saldo = 1000)
     ci = ContaInvestimento(numero = 4, titular = "Mesquita", saldo = 1000)
 
-    print(cc.get_valor_imposto())
-    cc.saca(1200)
+    #print(cc.get_valor_imposto())
+    try:
+       cc.saca(1200)
+       print("Saque efectuado com sucesso")
+    except ValueError:
+        print("O valor sacado precisa ser um valor positivo maior que zero")
+    except SaldoInsuficienteError:
+        print("Você não possui saldo suficiente para concluir está operação")
