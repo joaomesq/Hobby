@@ -1,0 +1,15 @@
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/bin/Debug/net8.0/HelloWorld
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/bin/Debug/net8.0/HelloWorld.deps.json
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/bin/Debug/net8.0/HelloWorld.runtimeconfig.json
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/bin/Debug/net8.0/HelloWorld.dll
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/bin/Debug/net8.0/HelloWorld.pdb
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.AssemblyInfoInputs.cache
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.AssemblyInfo.cs
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.csproj.CoreCompileInputs.cache
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.sourcelink.json
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.dll
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/refint/HelloWorld.dll
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.pdb
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/HelloWorld.genruntimeconfig.cache
+/home/yia/Documentos/Projects/Hobby/C#/HelloWorld/obj/Debug/net8.0/ref/HelloWorld.dll
