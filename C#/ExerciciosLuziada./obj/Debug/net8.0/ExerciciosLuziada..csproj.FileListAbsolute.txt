@@ -1,0 +1,15 @@
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./bin/Debug/net8.0/ExerciciosLuziada.
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./bin/Debug/net8.0/ExerciciosLuziada..deps.json
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./bin/Debug/net8.0/ExerciciosLuziada..runtimeconfig.json
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./bin/Debug/net8.0/ExerciciosLuziada..dll
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./bin/Debug/net8.0/ExerciciosLuziada..pdb
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..GeneratedMSBuildEditorConfig.editorconfig
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..AssemblyInfoInputs.cache
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..AssemblyInfo.cs
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..csproj.CoreCompileInputs.cache
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..sourcelink.json
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..dll
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/refint/ExerciciosLuziada..dll
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..pdb
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ExerciciosLuziada..genruntimeconfig.cache
+/home/yia/Documentos/Projects/Hobby/C#/ExerciciosLuziada./obj/Debug/net8.0/ref/ExerciciosLuziada..dll
