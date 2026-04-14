@@ -11,17 +11,14 @@ namespace Exercicios
             }
         }
 
-        public void media()
+        public double media(params double[] numeros)
         {
             double total = 0;
-            
-            for (int i = 1; i < 5; i++)
+            foreach (double numero in numeros)
             {
-                Console.WriteLine($"Insira a {i}ª nota: ");
-                var numero = double.Parse(Console.ReadLine()!);
-                total += numero; 
+                total += numero;
             }
-            Console.WriteLine($"A media é igual a {total/4}");
+            return total/numeros.Length;
         }
     }
 }
