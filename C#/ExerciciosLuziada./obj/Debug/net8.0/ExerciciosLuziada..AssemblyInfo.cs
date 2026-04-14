@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExerciciosLuziada.")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cd9e3047e294d75f52e0e6cba6b2e89b1f75945")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c999a977f8567281e91fe0d956bc44f2665a454")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExerciciosLuziada.")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExerciciosLuziada.")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
