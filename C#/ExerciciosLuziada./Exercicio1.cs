@@ -83,5 +83,11 @@ namespace Exercicios
             var fahrenheit = temperauraCelcius * 1.8 + 32;
             Console.WriteLine($"A temperatura em Fahrenheit é {fahrenheit}");
         }
+
+        public void velocidade(double distancia, double tempo){
+            var velocidade = distancia / tempo;
+            Console.WriteLine($"A velocidade é igual a {velocidade}");
+        }
+        
     }
 }

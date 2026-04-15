@@ -3,4 +3,4 @@
 var ex1 = new Exercicio1();
 
 //defirAprovado, somarPar, media
-ex1.celciusToFahrenheit(20);
+ex1.velocidade(20, 10);
