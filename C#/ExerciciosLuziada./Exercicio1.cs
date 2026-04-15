@@ -61,5 +61,27 @@ namespace Exercicios
             }
             
         }
+
+        public void maioresQue10(){
+            int m_10 = 0;
+
+            for (int i = 1; i < 6; i++){
+                Console.WriteLine($"Insira o {i}º número: ");
+                var numero = int.Parse(Console.ReadLine()!);
+                if(numero > 10)
+                    m_10++;
+            }
+            Console.WriteLine($"Números maiores que 10 são {m_10}");
+        }
+
+        public void indiceMasaCorporal(double massa, double altura){
+            Console.WriteLine($"Indice de massa corporal é igual a {massa/(altura*altura)}");
+        }
+
+        public void celciusToFahrenheit(double temperauraCelcius)
+        {
+            var fahrenheit = temperauraCelcius * 1.8 + 32;
+            Console.WriteLine($"A temperatura em Fahrenheit é {fahrenheit}");
+        }
     }
 }
