@@ -1,0 +1,15 @@
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/bin/Debug/net8.0/Entrega
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/bin/Debug/net8.0/Entrega.deps.json
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/bin/Debug/net8.0/Entrega.runtimeconfig.json
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/bin/Debug/net8.0/Entrega.dll
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/bin/Debug/net8.0/Entrega.pdb
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.GeneratedMSBuildEditorConfig.editorconfig
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.AssemblyInfoInputs.cache
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.AssemblyInfo.cs
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.csproj.CoreCompileInputs.cache
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.sourcelink.json
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.dll
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/refint/Entrega.dll
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.pdb
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/Entrega.genruntimeconfig.cache
+/home/yia/Documentos/Projects/Hobby/C#/Entrega/obj/Debug/net8.0/ref/Entrega.dll
