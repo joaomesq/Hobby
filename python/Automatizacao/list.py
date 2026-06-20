@@ -9,7 +9,7 @@ def listToString(lista):
         return str(lista[0])
 
     
-    itens_iniciais = ", ".join(str(item) for item in lista[:-1])
+    itens_iniciais = ", ".join(lista)
     
     return f"{itens_iniciais} and {str(lista[-1])}"
 
