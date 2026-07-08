@@ -98,3 +98,83 @@ if len(gender) % 2 == 0:
 else:
     print("IGNORE HIM!")
 '''
+'''
+n = int(input().strip())
+x = 0
+
+for _ in range(n):
+    command = input().strip()
+    if "++" in command:
+        x += 1
+    elif "--" in command:
+        x -= 1
+
+print(x)
+'''
+'''
+word = input().strip()
+print(word[0].upper()+word[1:])
+'''
+
+'''
+a, b = map(int, input().split())
+
+if a + b == a * b:
+    print("YES")
+else:
+    print("NO")
+'''
+'''
+n = int(input().strip())
+numbers = list(map(int, input().split()))
+
+min_val = min(numbers)
+n_operacoes = max(0, -min_val)
+
+if min_val < 0:
+    numbers = [x + n_operacoes for x in numbers]
+
+n_operacoes += numbers[0]
+
+for i in range(1, n):
+    d = numbers[i] - numbers[i-1]
+    if d > 0:
+        n_operacoes += d
+
+print(n_operacoes)
+'''
+
+'''
+t = int(input())
+
+for _ in range(t):
+    x = int(input().strip())
+    x_binary = bin(x >> 1)
+    
+    count_1 = x_binary.count('1')
+
+    ultimo_bit = x & 1
+
+    if count_1 % 2 != ultimo_bit:
+        print("-1")
+    else:
+        print(count_1)
+'''
+
+def f(n):
+
+    if n <= 0: return 0
+    if n<= 1: return 1
+
+    anterior = 0
+    atual = 1
+
+    for _ in range(2, n +1):
+        next = anterior + atual
+
+        anterior = atual
+        atual = next
+
+    return atual
+    
+print(f(4))
